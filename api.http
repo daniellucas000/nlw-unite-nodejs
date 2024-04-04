@@ -1,0 +1,34 @@
+POST http://localhost:3333/events
+Content-Type: application/json
+
+{
+    "title": "Evento teste 2",
+    "details": null,
+    "maximumAttendees": 1
+}
+
+###
+
+POST http://localhost:3333/events/c2c281f5-8358-4dce-9210-85be6d558d04/attendees
+Content-Type: application/json
+
+{
+    "name": "Daniel",
+    "email": "daniel2@example.com"
+}
+
+###
+
+GET http://localhost:3333/events/c2c281f5-8358-4dce-9210-85be6d558d04
+
+###
+
+GET http://localhost:3333/attendees/1/badge
+
+###
+
+GET http://localhost:3333/attendees/1/check-in
+
+###
+
+GET http://localhost:3333/events/c2c281f5-8358-4dce-9210-85be6d558d04/attendees?query=daniel
